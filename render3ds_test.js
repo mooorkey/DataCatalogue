@@ -1,27 +1,37 @@
-import * as THREE from 'three';
-import * as dat from 'dat.gui';
-import {OrbitControls} from 'three/examples/jsm/controls/OrbitControls';
+import * as THREE from "three";
+import * as dat from "dat.gui";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const td_schema_container = document.getElementById("3d-schema-container");
 let render_width = window.innerWidth / 1.2;
 let render_height = window.innerHeight / 1.2;
 
 const gui = new dat.GUI();
+var obj = {
+  add: function () {
+    console.log("clicked");
+  },
+};
 
+gui.add(obj, "add");
 const options = {
   showWireframe: false,
 };
-gui.add(options, 'showWireframe').onChange(function() {
-  console.log('showWireframe state changed to ' + options.showWireframe);
-  if (options.showWireframe === true) {
-    material.wireframe = true;
-  } else {
-    material.wireframe = false;
-  }
-}).name("Show Wireframe");
+gui
+  .add(options, "showWireframe")
+  .onChange(function () {
+    console.log("showWireframe state changed to " + options.showWireframe);
+    if (options.showWireframe === true) {
+      material.wireframe = true;
+    } else {
+      material.wireframe = false;
+    }
+  })
+  .name("Show Wireframe");
 
+// Initialize scene, camera and renderer
 const scene = new THREE.Scene();
-scene.background = new THREE.Color( 0x7f8287 );
+scene.background = new THREE.Color(0x7f8287);
 const camera = new THREE.PerspectiveCamera(
   75,
   window.innerWidth / window.innerHeight,
@@ -34,17 +44,18 @@ renderer.setSize(render_width, render_height);
 let render_obj = renderer.domElement;
 td_schema_container.appendChild(render_obj);
 
+// Orbital Control
 const orbitalController = new OrbitControls(camera, render_obj);
 orbitalController.update();
 
-// Create a box
+// Create a  test box model
 const geometry = new THREE.BoxGeometry(1, 1, 1);
 const material = new THREE.MeshBasicMaterial({ color: 0x00ff00});
 const cube = new THREE.Mesh(geometry, material);
 scene.add(cube);
 
-const axesHelper = new THREE.AxesHelper(10)
-scene.add(axesHelper)
+const axesHelper = new THREE.AxesHelper(10);
+scene.add(axesHelper);
 
 camera.position.z = 5;
 
@@ -59,7 +70,7 @@ function animate() {
 
 animate();
 
-window.addEventListener('resize', function() {
+window.addEventListener("resize", function () {
   // update the size of the renderer to match the new size of the window
   renderer.setSize(window.innerWidth / 2, window.innerHeight / 2);
 

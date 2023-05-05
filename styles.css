@@ -1,0 +1,100 @@
+.desktop1-container {
+    width: 100%;
+    display: flex;
+    overflow: auto;
+    min-height: 100vh;
+    align-items: center;
+    flex-direction: column;
+  }
+  .desktop1-desktop1 {
+    width: 100%;
+    height: 1024px;
+    display: flex;
+    overflow: hidden;
+    align-items: flex-start;
+    flex-shrink: 0;
+    background-color: rgba(255, 255, 255, 1);
+  }
+  .desktop1-group1 {
+    top: 33px;
+    left: 43px;
+    width: 375.0000305175781px;
+    height: 971px;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    flex-shrink: 1;
+  }
+  .desktop1-frame1 {
+    top: 69px;
+    left: 10px;
+    width: 310px;
+    height: 36px;
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25) ;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 20px;
+    justify-content: center;
+    background-color: rgba(239, 239, 239, 1);
+  }
+  .desktop1-text {
+    color: rgba(200, 200, 200, 1);
+    height: auto;
+    font-size: 20px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .desktop1-frame3 {
+    gap: 10px;
+    top: 125px;
+    left: 0px;
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    align-items: flex-start;
+  }
+  .desktop1-folder-section {
+    width: 310px;
+    height: 826px;
+    border-radius: 20px;
+  }
+  .desktop1-frame11 {
+    top: 0px;
+    left: 15.98590087890625px;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    flex-direction: column;
+  }
+  .desktop1-text2 {
+    color: rgba(0, 0, 0, 1);
+    height: auto;
+    font-size: 32px;
+    font-style: Regular;
+    text-align: center;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: normal;
+    font-stretch: normal;
+    text-decoration: none;
+  }
+  .desktop1-frame2 {
+    width: 304px;
+    height: 20px;
+  }
+  .desktop1-separator {
+    top: 0px;
+    left: 375px;
+    width: 971px;
+    height: 0px;
+    position: absolute;
+  }
+  
