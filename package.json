@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@cadexchanger/web-toolkit": "^3.18.1",
     "dat.gui": "^0.7.9",
     "three": "^0.152.2"
   },
